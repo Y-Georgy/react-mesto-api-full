@@ -1,0 +1,24 @@
+.form__input {
+  width: 100%;
+  border: none;
+  border-bottom: #ccc 2px solid;
+  font-size: 14px;
+  line-height: 33px;
+  font-weight: 400;
+  margin: 0 0 5px;
+  padding: 0 2px;
+  background-color: #000;
+  color: #ccc;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.form__input::-moz-placeholder {
+  color: #ccc;
+}

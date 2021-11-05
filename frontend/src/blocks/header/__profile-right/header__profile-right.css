@@ -1,0 +1,9 @@
+.header__profile-right {
+  display: flex;
+}
+
+@media (max-width: 918px) {
+  .header__profile-right {
+    display: none;
+  }
+}

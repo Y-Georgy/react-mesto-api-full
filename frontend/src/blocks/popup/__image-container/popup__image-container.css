@@ -1,0 +1,8 @@
+.popup__image-container {
+  max-width: 75vw;
+  max-height: 75vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,43 @@
+#BACKEND
+
+# Logs
+./backend/logs
+*.log
+./backend/npm-debug.log*
+
+# Dependency directory
+./backend/node_modules
+
+# Optional npm cache directory
+./backend/.npm
+
+# Optional REPL history
+./backend/.DS_Store
+./backend/.idea
+./backend/.vscode
+
+
+# FRONTEND
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./frontend/node_modules
+./frontend/.pnp
+./frontend/.pnp.js
+
+# testing
+./frontend/coverage
+
+# production
+./frontend/build
+
+# misc
+./frontend/.DS_Store
+./frontend/.env.local
+./frontend/.env.development.local
+./frontend/.env.test.local
+./frontend/.env.production.local
+
+./frontend/npm-debug.log*
+./frontend/yarn-debug.log*
+./frontend/yarn-error.log*

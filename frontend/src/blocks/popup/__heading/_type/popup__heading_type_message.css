@@ -1,0 +1,12 @@
+.popup__heading_type_message {
+  margin-top: 178px;
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+@media (max-width: 525px) {
+  .popup__heading_type_message {
+    margin: 178px auto 13px;
+    max-width: 300px;
+  }
+}

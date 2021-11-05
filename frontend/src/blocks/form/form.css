@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 358px;
+  color: #fff;
+  padding: 0 0 60px;
+}
+
+@media (max-width: 525px) {
+  .form {
+    width: calc(100vw - 38px);
+    padding: 25px 22px;
+    padding: 0;
+  }
+}

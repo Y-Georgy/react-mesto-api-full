@@ -1,0 +1,14 @@
+.profile__title-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 22px;
+}
+
+@media (max-width: 918px) {
+  .profile__title-overlay {
+    margin-top: 26px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+}

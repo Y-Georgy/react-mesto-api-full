@@ -1,0 +1,11 @@
+.header__link_color_grey {
+  color: #a9a9a9;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header__link_color_grey:hover {
+  opacity: 1;
+  color: #fff;
+  transition: color 0.3s linear;
+}

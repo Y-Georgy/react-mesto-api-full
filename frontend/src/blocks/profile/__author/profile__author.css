@@ -1,0 +1,11 @@
+.profile__author {
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 918px) {
+  .profile__author {
+    flex-direction: column;
+    align-items: center;
+  }
+}

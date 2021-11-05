@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  font-family: 'Inter', 'Arial', sans-serif;
+  padding-bottom: 60px;
+}
+
+/* .page, .content, img, div, h1, h2, h3, p, ul, li, nav, section {
+  outline: red 1px dashed;
+} */
+
+@media (max-width: 918px) {
+  .page {
+    padding-bottom: 36px;
+  }
+}
