@@ -8,6 +8,7 @@ const router = require('./routes');
 const auth = require('./middlewares/auth');
 const centralizedErrors = require('./middlewares/centralizedErrors');
 const { isValidUrl } = require('./utils/methods');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { createUser, login } = require('./controllers/users');
 
@@ -35,6 +36,8 @@ app.use('*', cors(options)); // ПЕРВЫМ!
 app.use(cookieParser());
 app.use(express.json());
 
+app.use(requestLogger); // подключаем логгер запросов
+
 app.post('/signup', celebrate({
   // валидируем body
   body: Joi.object().keys({
@@ -57,6 +60,9 @@ app.post('/signin', celebrate({
 app.use(auth);
 
 app.use(router); // запускаем роутер
+
+app.use(errorLogger); // подключаем логгер ошибок
+
 app.use(errors()); // обработчик ошибок celebrate
 app.use(centralizedErrors); // централизованная обработка ошибок
 
