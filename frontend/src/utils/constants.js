@@ -1,4 +1,4 @@
-export const linkBackend = 'http://localhost:3001';
+export const linkBackend = 'http://mesto-back-georgy.nomoredomains.work/'; // http://localhost:3001 http://mesto-back-georgy.nomoredomains.work/
 
 export const initialProfile = {
   name: 'Messi',

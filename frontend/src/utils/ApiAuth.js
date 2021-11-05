@@ -56,7 +56,6 @@ class ApiAuth {
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
-        // Authorization: `Bearer ${token}`,
       },
     }).then((res) => {
       if (res.ok) {

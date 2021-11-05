@@ -61,22 +61,6 @@ class Api {
     }).then(this._handleResponse)
   }
 
-  // удаление лайка
-  // deleteLike(cardId) {
-  //   return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-  //     method: 'DELETE',
-  //     headers: this._headers,
-  //   }).then(this._handleResponse)
-  // }
-
-  // // добавление лайка
-  // addLike(cardId) {
-  //   return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-  //     method: 'PUT',
-  //     headers: this._headers,
-  //   }).then(this._handleResponse)
-  // }
-
   changeLikeCardStatus(cardId, isLiked) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: `${isLiked ? 'DELETE' : 'PUT'}`,
@@ -99,7 +83,6 @@ class Api {
 export const api = new Api({
   baseUrl: linkBackend,
   headers: {
-    // authorization: 'ef9c4dff-4cef-417b-a4dd-85f6d4ba3fef',
     'Content-Type': 'application/json',
   },
 })

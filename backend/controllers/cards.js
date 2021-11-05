@@ -29,7 +29,6 @@ module.exports.deleteCardById = (req, res, next) => {
 
   Card.findById(cardId)
     .then((card) => {
-      // console.log('card', card);
       if (!card) {
         next(new NotFoundError('Карточка с указанным _id не найдена'));
       }
