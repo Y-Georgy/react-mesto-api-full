@@ -22,8 +22,7 @@ const options = {
   origin: [
     'http://localhost:3000',
     'http://mesto-georgy.nomoredomains.work',
-    // 'https://ВАШ ДОМЕЙН С ДОКУМЕНТА',
-    // 'https://YOUR.github.io',
+    'https://mesto-georgy.nomoredomains.work',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
