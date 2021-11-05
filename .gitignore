@@ -43,4 +43,7 @@
 ./frontend/yarn-error.log*
 
 # logs
-*.log 
+*.log
+
+# env
+.env 
