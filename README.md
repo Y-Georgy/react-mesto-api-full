@@ -12,7 +12,6 @@ IP: 84.201.158.115
 ```
 - React
 - Express
-
 ```
 
-![N|Solid](https://img.shields.io/badge/-©%2021-red)
+![N|Solid](https://img.shields.io/badge/-©%202021-red)
