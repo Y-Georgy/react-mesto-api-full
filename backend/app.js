@@ -23,6 +23,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 const options = {
   origin: [
     'http://localhost:3000',
+    'http://mesto-georgy.nomoredomains.work',
     'https://mesto-georgy.nomoredomains.work',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
