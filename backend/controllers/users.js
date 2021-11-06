@@ -1,4 +1,4 @@
-const { NODE_ENV, JWT_SECRET } = process.env;
+require('dotenv').config();
 const bcrypt = require('bcryptjs'); // установленный модуль для хеширования пароля
 const validator = require('validator');
 const jwt = require('jsonwebtoken'); // модуль для создания токенов
@@ -185,6 +185,8 @@ module.exports.login = (req, res, next) => {
             // хеши паролей не совпали — отправляем ошибку
             throw new UnauthorizedError('Неправильные почта или пароль');
           }
+
+          const { NODE_ENV, JWT_SECRET } = process.env;
 
           // аутентификация успешна
           const token = jwt.sign(
