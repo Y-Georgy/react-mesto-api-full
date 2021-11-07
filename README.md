@@ -7,11 +7,14 @@
 Бекенд: https://mesto-back-georgy.nomoredomains.work/  
 IP: 84.201.158.115
 
-#### Технологии
+#### Технологический стек
 
 ```
 - React
+- Node.js
 - Express
+- html
+- css
 ```
 
 ![N|Solid](https://img.shields.io/badge/-©%202021-red)
