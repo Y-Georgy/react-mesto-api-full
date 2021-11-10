@@ -47,6 +47,17 @@ function App() {
       .finally(() => setIsLoading(false))
   }, [loggedIn])
 
+  useEffect(() => {
+    api.getUsers()
+      .then((users) => {
+        console.log(users)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
+
+
   // для попапа большого изображения
   const [selectedCard, setSelectedCard] = useState({})
 

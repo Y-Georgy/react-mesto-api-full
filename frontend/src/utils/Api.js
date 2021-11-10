@@ -23,6 +23,15 @@ class Api {
     }).then(this._handleResponse)
   }
 
+    // TODO удалить
+    getUsers() {
+      return fetch(`${this._baseUrl}/users`, {
+        method: 'GET',
+        credentials: 'include',
+        headers: this._headers,
+      }).then(this._handleResponse)
+    }
+
   // добавление карточки
   addCard(dataCard) {
     return fetch(`${this._baseUrl}/cards`, {
