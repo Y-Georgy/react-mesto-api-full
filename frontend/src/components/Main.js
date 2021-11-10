@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CurrentUserContext } from '../contexts/CurrentUserContext'
 import Card from './Card'
 
 function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, cards, onCardLike, onCardDelete }) {
   // подписка на контекст данных профиля
   const currentUser = React.useContext(CurrentUserContext)
+  const [sortedCards, setSortedCards] = useState([])
+
+  // сортировка массива карточек по дате создания
+  useEffect(() => {
+    const newArrCards = cards.sort((a, b) => {
+      let c = new Date(a.createdAt);
+      let d = new Date(b.createdAt);
+      return d-c;
+    });
+    setSortedCards(newArrCards);
+  }, [cards])
 
   return (
     <main className="content">
@@ -29,7 +40,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, cards, onC
       </section>
       <section className="elements">
         <ul className="elements__list">
-          {cards.map((card) => (
+          {sortedCards.map((card) => (
             <Card
               key={card._id}
               card={card}
