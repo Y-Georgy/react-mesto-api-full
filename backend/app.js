@@ -40,13 +40,6 @@ app.use(express.json());
 
 app.use(requestLogger); // подключаем логгер запросов
 
-// TODO Убрать после ревью. Краштест для ревью
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 app.post('/signup', celebrate({
   // валидируем body
   body: Joi.object().keys({

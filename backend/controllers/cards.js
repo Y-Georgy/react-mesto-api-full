@@ -33,7 +33,7 @@ module.exports.deleteCardById = (req, res, next) => {
         next(new NotFoundError('Карточка с указанным _id не найдена'));
       }
 
-      // if (card.owner._id.toString() === userId) {
+      if (card.owner._id.toString() === userId) {
         Card.findByIdAndRemove(cardId)
           .orFail(() => {
             throw new NotFoundError('Карточка с указанным _id не найдена');
@@ -47,9 +47,9 @@ module.exports.deleteCardById = (req, res, next) => {
             }
             next(err);
           });
-      // } else {
-      //   next(new ForbiddenDataError('У Вас нет прав на удаление этой карточки'));
-      // }
+      } else {
+        next(new ForbiddenDataError('У Вас нет прав на удаление этой карточки'));
+      }
     })
     .catch(next);
 };
