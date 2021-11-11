@@ -1,17 +1,25 @@
 # Проект: React-mesto-api-full
 
-### Описание:
-Фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.  
+### Описание
+Объединение фронтенда и бекенда, подготовка к публикации  
+Репозиторий разработки фронтенда - https://github.com/Y-Georgy/react-mesto-auth  
+Репозиторий разработки бекенда - https://github.com/Y-Georgy/express-mesto  
+
+### Функционал
+Авторизация и регистрации пользователей, операции с карточками и пользователями
 Фронтенд: https://mesto-georgy.nomoredomains.work/  
 Бекенд: https://mesto-back-georgy.nomoredomains.work/
 
 ### Стек
 
 ```
-- React
+- React.js
 - Node.js
 - Express
-- REST API
+- Rest API
+- MongoDB
+- Mongoose
+- Eslint
 - CSS3
 ```
 
