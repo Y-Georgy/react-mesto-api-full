@@ -6,9 +6,9 @@
 Репозиторий разработки бекенда - https://github.com/Y-Georgy/express-mesto  
 
 ### Функционал
-Авторизация и регистрации пользователей, операции с карточками и пользователями
-Фронтенд: https://mesto-georgy.nomoredomains.work/  
-Бекенд: https://mesto-back-georgy.nomoredomains.work/
+Авторизация и регистрации пользователей, операции с карточками и пользователями  
+Опубликованный фронтенд: https://mesto-georgy.nomoredomains.work/  
+Опубликованный бекенд: https://mesto-back-georgy.nomoredomains.work/
 
 ### Стек
 
