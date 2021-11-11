@@ -12,7 +12,6 @@
 - Node.js
 - Express
 - REST API
-- HTML5
 - CSS3
 ```
 
