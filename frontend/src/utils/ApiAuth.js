@@ -50,6 +50,23 @@ class ApiAuth {
     })
   }
 
+
+  logout() {
+    return fetch(`${this._baseUrl}/logout`, {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((res) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        return Promise.reject('Что-то пошло не так! Попробуйте ещё раз.')
+      }
+    })
+  }
+
   checkToken() {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'GET',

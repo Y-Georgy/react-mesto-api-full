@@ -57,6 +57,14 @@ app.post('/signin', celebrate({
     password: Joi.string().required().pattern(new RegExp('^[a-zA-Z0-9]{8,}$')),
   }),
 }), login);
+app.get('/logout', (req, res, next) => {
+  res
+    .cookie('jwt', '', {
+      maxAge: -1,
+    })
+    .send({ message: 'Выход совершен успешно' });
+  next();
+});
 
 // авторизация
 app.use(auth);

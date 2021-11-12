@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
 import { useState } from 'react'
 
-function Header({ userAuth, onSignOut }) {
+function Header({ userAuth, onLogout }) {
   const [isActiveProfile, setActiveProfile] = useState(false)
 
   function handleBurgerMenuClick() {
@@ -15,7 +15,7 @@ function Header({ userAuth, onSignOut }) {
       <Route exact path="/">
         <div className={`header__profile-top${isActiveProfile ? ' header__profile-top_opened' : ''}`}>
           <p className="header__email">{userAuth.email}</p>
-          <Link to="/sign-in" className="header__link header__link_color_grey" onClick={onSignOut}>
+          <Link to="/sign-in" className="header__link header__link_color_grey" onClick={onLogout}>
             Выйти
           </Link>
         </div>
@@ -43,7 +43,7 @@ function Header({ userAuth, onSignOut }) {
               />
               <div className="header__profile-right">
                 <p className="header__email">{userAuth.email}</p>
-                <Link to="/sign-in" className="header__link header__link_color_grey" onClick={onSignOut}>
+                <Link to="/sign-in" className="header__link header__link_color_grey" onClick={onLogout}>
                   Выйти
                 </Link>
               </div>

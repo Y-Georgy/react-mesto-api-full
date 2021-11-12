@@ -31,7 +31,8 @@ function App() {
 
   // Получение карточек и данных пользователя
   useEffect(() => {
-    Promise.all([api.getProfile(), api.getCards()])
+    if (loggedIn) {
+      Promise.all([api.getProfile(), api.getCards()])
       .then(([profileInfo, cards]) => {
         setCurrentUser(profileInfo.data)
         setCards(cards.data)
@@ -45,6 +46,7 @@ function App() {
         }
       })
       .finally(() => setIsLoading(false))
+    }
   }, [loggedIn])
 
   // для попапа большого изображения
@@ -233,19 +235,22 @@ function App() {
   }, [])
 
   // ВЫХОД ПОЛЬЗОВАТЕЛЯ
-  function handleSignOutButtonClick() {
-    exit()
-  }
-  function exit() {
-    // localStorage.removeItem('token')
-    setLoggedIn(false)
-    setUserAuth({})
+  function handleLogoutButtonClick() {
+    apiAuth
+      .logout()
+      .then((res) => {
+        setLoggedIn(false)
+        setUserAuth({})
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   return (
     <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
-        <Header userAuth={userAuth} onSignOut={handleSignOutButtonClick} />
+        <Header userAuth={userAuth} onLogout={handleLogoutButtonClick} />
         <InfoTooltip isError={isErrorToolTip} message={toolTipMessage} onClose={handlePopupClose} />
 
         <Switch>
