@@ -28,11 +28,11 @@
 ```
 git clone https://github.com/Y-Georgy/react-mesto-api-full.git
 ```
-2 Зайдите в папку frontend
+2. Зайдите в папку frontend
 ```
 cd frontend/
 ```
-3 Установите NPM зависимости
+3. Установите NPM зависимости
 ```
 npm i
 ```
