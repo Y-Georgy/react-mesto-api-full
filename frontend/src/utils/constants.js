@@ -1,4 +1,5 @@
-export const linkBackend = 'https://mesto-back-georgy.nomoredomains.work'; // http://localhost:3001 https://mesto-back-georgy.nomoredomains.work
+export const linkBackend = 'https://mesto-back-georgy.nomoredomains.work';
+// export const linkBackend = 'http://localhost:3001'; // для подключения к локальному бекенду
 
 export const initialProfile = {
   name: 'Messi',
