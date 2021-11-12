@@ -23,23 +23,36 @@
 - CSS3
 ```
 
-### Инструкция по развёртыванию фронтенда
-1. Клонируйте репозиторий
-2. Зайдите в папку frontend
-3. Установите NPM зависимости
+### Развёртывание  
 ```
-npm install
+git clone https://github.com/Y-Georgy/react-mesto-api-full.git
 ```
-4. Запуск в режиме разработки
+Фронтенд:
 ```
-npm start
+cd frontend/
+npm i && npm start
 ```
+Для подключения фронтенда к локальному бекенду нужно поменять linkBackend, см. первые две строчки в файле:
+```
+frontend\src\utils\constants.js
+```
+
+Бекенд:
+
+```
+cd backend/
+npm i && npm run dev
+```
+
+Установка MongoDB:
+
+- Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#install-mdb-edition  
+- MacOS https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
 
 ### Планы по доработке 
 
-- Сделать живую валидацию форм
-- ~~Показать/скрыть пароль при регистрации/логине~~
-- ~~Поле повторного ввода пароля при регистрации~~
-- Удаление куки при logout
+- Сделать нативную валидацию форм
+- Подтверждение Email при регистрации
 
 ![N|Solid](https://img.shields.io/badge/-©%202021-red)
