@@ -23,27 +23,32 @@
 - CSS3
 ```
 
-### Развёртывание фронтенда
-1. Клонируйте репозиторий
+### Развёртывание  
 ```
 git clone https://github.com/Y-Georgy/react-mesto-api-full.git
 ```
-2. Зайдите в папку frontend
+Фронтенд:
 ```
 cd frontend/
+npm i && npm start
 ```
-3. Установите NPM зависимости
+Для подключения фронтенда к локальному бекенду нужно поменять linkBackend, см. первые две строчки в файле:
 ```
-npm i
+frontend\src\utils\constants.js
 ```
-4. Запуск в режиме разработки
+
+Бекенд:
+
 ```
-npm start
+cd backend/
+npm i && npm run dev
 ```
-5. Или сборка для деплоя
-```
-npm run build
-```
+
+Установка MongoDB:
+
+- Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#install-mdb-edition  
+- MacOS https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+
 
 ### Планы по доработке 
 
