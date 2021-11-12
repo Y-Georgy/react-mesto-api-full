@@ -87,3 +87,5 @@
 @import url(./blocks/form/__error/form__error.css);
 @import url(./blocks/form/__text/form__text.css);
 @import url(./blocks/form/__link/form__link.css);
+@import url(./blocks/form/__password-overlay/form__password-overlay.css);
+@import url(./blocks/form/__password-control/form__password-control.css);
