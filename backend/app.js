@@ -61,6 +61,9 @@ app.get('/logout', (req, res, next) => {
   res
     .cookie('jwt', '', {
       maxAge: -1,
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
     })
     .send({ message: 'Выход совершен успешно' });
   next();
