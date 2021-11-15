@@ -6,6 +6,7 @@ const { celebrate, Joi } = require('celebrate'); // валидация прих�
 const { errors } = require('celebrate'); // для обработки ошибок joi, celebrate
 const cors = require('cors'); // пакет node.js
 const router = require('./routes');
+
 const auth = require('./middlewares/auth');
 const centralizedErrors = require('./middlewares/centralizedErrors');
 const { isValidUrl } = require('./utils/methods');
@@ -15,9 +16,14 @@ const { createUser, login } = require('./controllers/users');
 
 const { PORT = 3001 } = process.env;
 const app = express();
-
+const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
+// NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key'
 // для подключения к БД
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
+mongoose.connect(
+  NODE_ENV === 'production'
+    ? `mongodb://${LOGIN_DB}:${PASSW_DB}127.0.0.1:27017/mestodb`
+    : 'mongodb://localhost:27017/mestodb',
+);
 
 // Безопасность. Обработка CORS запросов
 const options = {
