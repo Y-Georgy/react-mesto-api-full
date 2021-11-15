@@ -25,6 +25,8 @@ const options = {
     'http://localhost:3000',
     'http://mesto-georgy.nomoredomains.work',
     'https://mesto-georgy.nomoredomains.work',
+    'http://mesto.tmweb.ru',
+    'https://mesto.tmweb.ru',
   ],
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
@@ -40,23 +42,35 @@ app.use(express.json());
 
 app.use(requestLogger); // подключаем логгер запросов
 
-app.post('/signup', celebrate({
-  // валидируем body
-  body: Joi.object().keys({
-    name: Joi.string().min(2).max(30),
-    about: Joi.string().min(2).max(30),
-    avatar: Joi.string().custom(isValidUrl),
-    email: Joi.string().required().email(),
-    password: Joi.string().required().pattern(new RegExp('^[a-zA-Z0-9]{8,}$')),
+app.post(
+  '/signup',
+  celebrate({
+    // валидируем body
+    body: Joi.object().keys({
+      name: Joi.string().min(2).max(30),
+      about: Joi.string().min(2).max(30),
+      avatar: Joi.string().custom(isValidUrl),
+      email: Joi.string().required().email(),
+      password: Joi.string()
+        .required()
+        .pattern(new RegExp('^[a-zA-Z0-9]{8,}$')),
+    }),
   }),
-}), createUser);
-app.post('/signin', celebrate({
-  // валидируем body
-  body: Joi.object().keys({
-    email: Joi.string().required().email(),
-    password: Joi.string().required().pattern(new RegExp('^[a-zA-Z0-9]{8,}$')),
+  createUser,
+);
+app.post(
+  '/signin',
+  celebrate({
+    // валидируем body
+    body: Joi.object().keys({
+      email: Joi.string().required().email(),
+      password: Joi.string()
+        .required()
+        .pattern(new RegExp('^[a-zA-Z0-9]{8,}$')),
+    }),
   }),
-}), login);
+  login,
+);
 app.get('/logout', (req, res, next) => {
   res
     .cookie('jwt', '', {

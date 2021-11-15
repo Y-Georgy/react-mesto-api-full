@@ -1,11 +1,11 @@
-export const linkBackend = 'https://mesto-back-georgy.nomoredomains.work';
+// export const linkBackend = 'https://mesto-back-georgy.nomoredomains.work';
 // export const linkBackend = 'http://localhost:3001'; // для подключения к локальному бекенду
+export const linkBackend = 'https://api.mesto.tmweb.ru'
 
 export const initialProfile = {
   name: 'Messi',
   about: 'Football Player',
-  avatar:
-    'https://avatars.mds.yandex.net/get-zen_doc/2749135/pub_601972248414c340c66dff32_60197301b19d82187ec74b6d/scale_1200',
+  avatar: 'https://avatars.mds.yandex.net/get-zen_doc/2749135/pub_601972248414c340c66dff32_60197301b19d82187ec74b6d/scale_1200',
   _id: '5e3543d6c22b20fed4882e3e',
   cohort: 'cohort-26',
 }
@@ -381,8 +381,7 @@ export const initialCards = [
       {
         name: 'Рома',
         about: 'Студент',
-        avatar:
-          'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
+        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
         _id: 'd9ae90f9cf436d2db082cf21',
         cohort: 'cohort-26',
       },
@@ -419,8 +418,7 @@ export const initialCards = [
       {
         name: 'Рома',
         about: 'Студент',
-        avatar:
-          'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
+        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
         _id: 'd9ae90f9cf436d2db082cf21',
         cohort: 'cohort-26',
       },
@@ -530,8 +528,7 @@ export const initialCards = [
     owner: {
       name: 'Messi',
       about: 'Football Player',
-      avatar:
-        'https://avatars.mds.yandex.net/get-zen_doc/2749135/pub_601972248414c340c66dff32_60197301b19d82187ec74b6d/scale_1200',
+      avatar: 'https://avatars.mds.yandex.net/get-zen_doc/2749135/pub_601972248414c340c66dff32_60197301b19d82187ec74b6d/scale_1200',
       _id: '5e3543d6c22b20fed4882e3e',
       cohort: 'cohort-26',
     },
@@ -634,8 +631,7 @@ export const initialCards = [
       {
         name: 'Рома',
         about: 'Студент',
-        avatar:
-          'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
+        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/40456/pub_6101b84b58d3f036d3f0a972_6101ba95e54c2a602f3ea691/scale_1200',
         _id: 'd9ae90f9cf436d2db082cf21',
         cohort: 'cohort-26',
       },
