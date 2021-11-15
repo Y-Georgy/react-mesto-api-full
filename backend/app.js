@@ -14,8 +14,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { createUser, login } = require('./controllers/users');
 
-const { PORT = 3002 } = process.env;
-const { NODE_ENV } = process.env;
+const { PORT = 3002, NODE_ENV } = process.env;
 
 const app = express();
 console.log(process.env.PORT);
