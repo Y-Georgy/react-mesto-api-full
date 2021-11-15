@@ -14,8 +14,13 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { createUser, login } = require('./controllers/users');
 
-const { PORT = 3002, NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
+const { PORT } = process.env;
+const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
+
 const app = express();
+console.log(NODE_ENV);
+console.log(LOGIN_DB);
+console.log(PASSW_DB);
 
 // для подключения к БД
 mongoose.connect(
