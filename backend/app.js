@@ -15,21 +15,21 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { createUser, login } = require('./controllers/users');
 
 const { PORT = 3002 } = process.env;
-const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
+const { NODE_ENV } = process.env;
 
 const app = express();
 console.log(process.env.PORT);
 console.log(PORT);
 console.log(NODE_ENV);
-console.log(LOGIN_DB);
-console.log(PASSW_DB);
 
 // для подключения к БД
-mongoose.connect(
-  NODE_ENV === 'production'
-    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@127.0.0.1:27017/mestodb`
-    : 'mongodb://localhost:27017/mestodb',
-);
+// mongoose.connect(
+//   NODE_ENV === 'production'
+//     ? `mongodb://${LOGIN_DB}:${PASSW_DB}@127.0.0.1:27017/mestodb`
+//     : 'mongodb://localhost:27017/mestodb',
+// );
+
+mongoose.connect('mongodb://localhost:27017/mestodb');
 
 // Безопасность. Обработка CORS запросов
 const options = {
