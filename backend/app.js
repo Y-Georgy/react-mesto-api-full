@@ -14,10 +14,12 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { createUser, login } = require('./controllers/users');
 
-const { PORT } = process.env;
+const { PORT = 3002 } = process.env;
 const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
 
 const app = express();
+console.log(process.env.PORT);
+console.log(PORT);
 console.log(NODE_ENV);
 console.log(LOGIN_DB);
 console.log(PASSW_DB);

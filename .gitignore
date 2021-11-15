@@ -46,4 +46,4 @@
 *.log
 
 # env
-.env 
+./backend/.env
