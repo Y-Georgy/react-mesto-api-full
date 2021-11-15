@@ -28,7 +28,7 @@ console.log(NODE_ENV);
 //     : 'mongodb://localhost:27017/mestodb',
 // );
 
-mongoose.connect('mongodb://localhost:27017/mestodb');
+mongoose.connect('mongodb://188.225.83.129:27017/mestodb');
 
 // Безопасность. Обработка CORS запросов
 const options = {
