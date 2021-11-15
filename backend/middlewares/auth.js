@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
   const token = req.cookies.jwt;
 
   if (!token) {
-    throw new UnauthorizedError('Необходима авторизация');
+    throw new UnauthorizedError('Необходима авторизация2');
   }
 
   const { NODE_ENV, JWT_SECRET } = process.env;
@@ -15,10 +15,13 @@ module.exports = (req, res, next) => {
 
   // верифицируем токен
   try {
-    payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key'); // TODO проверить работает ли .ENV
+    payload = jwt.verify(
+      token,
+      NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key',
+    ); // TODO проверить работает ли .ENV
   } catch (err) {
     // отправим ошибку, если не получилось
-    next(new UnauthorizedError('Необходима авторизация'));
+    next(new UnauthorizedError('Необходима авторизация1'));
   }
 
   req.user = payload; // записываем пейлоуд в объект запроса
