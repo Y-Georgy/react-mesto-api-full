@@ -14,14 +14,13 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { createUser, login } = require('./controllers/users');
 
-const { PORT = 3001 } = process.env;
+const { PORT = 3002, NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
 const app = express();
-const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
-// NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key'
+
 // для подключения к БД
 mongoose.connect(
   NODE_ENV === 'production'
-    ? `mongodb://${LOGIN_DB}:${PASSW_DB}127.0.0.1:27017/mestodb`
+    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@127.0.0.1:27017/mestodb`
     : 'mongodb://localhost:27017/mestodb',
 );
 
