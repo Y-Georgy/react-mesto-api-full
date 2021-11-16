@@ -15,10 +15,15 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { createUser, login } = require('./controllers/users');
 
 const { PORT } = process.env;
+const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/mestodb');
+mongoose.connect(
+  NODE_ENV === 'production'
+    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@127.0.0.1:27017/mestodb`
+    : 'mongodb://localhost:27017/mestodb',
+);
 
 // Безопасность. Обработка CORS запросов
 const options = {
