@@ -15,14 +15,12 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { createUser, login } = require('./controllers/users');
 
 const { PORT } = process.env;
-const { NODE_ENV, LOGIN_DB, PASSW_DB } = process.env;
+const { NODE_ENV, MONGO_LINK } = process.env;
 
 const app = express();
 
 mongoose.connect(
-  NODE_ENV === 'production'
-    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@mesto.tmweb.ru:27017/mestodb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`
-    : 'mongodb://localhost:27017/mestodb',
+  NODE_ENV === 'production' ? MONGO_LINK : 'mongodb://localhost:27017/mestodb',
 );
 
 // Безопасность. Обработка CORS запросов
