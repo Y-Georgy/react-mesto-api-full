@@ -21,7 +21,7 @@ const app = express();
 
 mongoose.connect(
   NODE_ENV === 'production'
-    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@188.225.83.129:27017/mestodb`
+    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@mesto.tmweb.ru:27017/mestodb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false`
     : 'mongodb://localhost:27017/mestodb',
 );
 
