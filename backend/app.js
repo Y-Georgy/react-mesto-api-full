@@ -20,7 +20,9 @@ const { NODE_ENV, MONGO_LINK } = process.env;
 const app = express();
 
 mongoose.connect(
-  NODE_ENV === 'production' ? MONGO_LINK : 'mongodb://localhost:27017/mestodb',
+  NODE_ENV === 'production'
+    ? `${MONGO_LINK}`
+    : 'mongodb://localhost:27017/mestodb',
 );
 
 // Безопасность. Обработка CORS запросов
