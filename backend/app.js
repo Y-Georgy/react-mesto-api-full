@@ -21,7 +21,7 @@ const app = express();
 
 mongoose.connect(
   NODE_ENV === 'production'
-    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@localhost:27017/mestodb`
+    ? `mongodb://${LOGIN_DB}:${PASSW_DB}@188.225.83.129:27017/mestodb`
     : 'mongodb://localhost:27017/mestodb',
 );
 
