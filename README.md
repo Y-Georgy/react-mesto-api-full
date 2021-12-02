@@ -7,8 +7,8 @@
 
 ### Функционал
 Авторизация и регистрации пользователей, операции с карточками и пользователями  
-Опубликованный фронтенд: https://mesto-georgy.nomoredomains.work/  
-Опубликованный бекенд: https://mesto-back-georgy.nomoredomains.work/
+Опубликованный фронтенд: https://mesto.tmweb.ru/  
+Опубликованный бекенд: https://api.mesto.tmweb.ru/
 
 ### Стек
 
